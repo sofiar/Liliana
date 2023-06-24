@@ -1,2 +1,5 @@
 .vscode/*
-
+Library/*
+Logs/*
+Packages/*
+ProjectSettings/*
