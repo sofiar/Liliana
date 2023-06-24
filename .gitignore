@@ -6,3 +6,5 @@ ProjectSettings/*
 Liliana.sln
 Temp/*
 UserSettings/*
+obj/*
+Assembly-CSharp.csproj
