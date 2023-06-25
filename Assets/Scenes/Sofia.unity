@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.05
+  cam: {fileID: 0}
 --- !u!50 &722429237
 Rigidbody2D:
   serializedVersion: 4
@@ -386,6 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ladri: {fileID: 7714730909434990882, guid: 60fbcc3d1af47174b9313805a5a90aa0, type: 3}
+  pp: {fileID: 5552165245302967862, guid: 1a3a0c54c2e40edbd897342e03295b37, type: 3}
 --- !u!4 &959468628
 Transform:
   m_ObjectHideFlags: 0
