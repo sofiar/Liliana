@@ -226,7 +226,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.05
   cam: {fileID: 519420031}
-  hook_speed: 1
+  hook_speed: 10
   hook: {fileID: 8072033383392850757, guid: 756c94be3d4a84e4a84dfa7e28ae8a4c, type: 3}
   rope: {fileID: 227014848611818365, guid: 0837386c1c34acd478cd2522e84a2df2, type: 3}
 --- !u!1 &519420028
@@ -391,6 +391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ladri: {fileID: 7714730909434990882, guid: 60fbcc3d1af47174b9313805a5a90aa0, type: 3}
+  pp: {fileID: 5552165245302967862, guid: 1a3a0c54c2e40edbd897342e03295b37, type: 3}
 --- !u!4 &1962472579
 Transform:
   m_ObjectHideFlags: 0

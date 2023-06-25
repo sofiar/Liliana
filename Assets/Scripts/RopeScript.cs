@@ -23,6 +23,7 @@ public class RopeScript : MonoBehaviour
         distance_to_hook = (hook.transform.position-player.transform.position).magnitude;
         transform.localScale = new Vector3(transform.localScale.x,distance_to_hook,1);
         transform.rotation = Quaternion.LookRotation(Vector3.forward, LookDirection);
+        transform.position=player.transform.position;
 
         
     }

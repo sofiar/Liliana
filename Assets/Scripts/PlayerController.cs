@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     public float hook_speed;
     public GameObject hook;
     public GameObject rope;
+
+    GameObject hook_instance;
+    GameObject rope_instance;
     void Start()
     {
         
@@ -33,21 +36,20 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            GameObject hook_instance;
             hook_instance = Instantiate(hook, transform.position+LookDirection.normalized*1.5f, Quaternion.identity);
-            hook_instance.GetComponent<Rigidbody2D>().velocity=LookDirection*hook_speed;
+            hook_instance.GetComponent<Rigidbody2D>().velocity=LookDirection.normalized*hook_speed;
+            hook_instance.GetComponent<HookScript>().player=gameObject;
 
-            GameObject rope_instance;
             rope_instance = Instantiate(rope, transform.position,Quaternion.identity);
             rope_instance.GetComponent<RopeScript>().player=gameObject;
             rope_instance.GetComponent<RopeScript>().hook=hook_instance;
-
-            
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            Destroy(hook_instance);
+            Destroy(rope_instance);
         }
 
-        // create a line between the hook and the player.
-        // option 1: a square sprite with the y scale set to the right distance and rotation.
-        // option 2: a number of dots with their distance varying (harder)
 
 
     }
