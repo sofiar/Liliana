@@ -20,8 +20,8 @@ public class HookScript : MonoBehaviour
         {
             Vector3 direction = (transform.position-player.transform.position).normalized;
             player.GetComponent<Rigidbody2D>().AddForce(direction*pullstrength);
-            print(direction*pullstrength);
         }
+        //instead of this, create a spring component
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -33,7 +33,17 @@ public class HookScript : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().constraints=RigidbodyConstraints2D.FreezeAll;
             gameObject.GetComponent<PolygonCollider2D>().enabled=false;
             pull=true;
+            player.GetComponent<SpringJoint2D>().connectedBody=gameObject.GetComponent<Rigidbody2D>();
+            player.GetComponent<SpringJoint2D>().enabled=true;
         }
         
+    }
+
+    /// <summary>
+    /// This function is called when the MonoBehaviour will be destroyed.
+    /// </summary>
+    private void OnDestroy()
+    {
+        player.GetComponent<SpringJoint2D>().enabled=false;
     }
 }
