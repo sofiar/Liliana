@@ -22,13 +22,13 @@ public class paredmaker : MonoBehaviour
     
     // add pegajocidad (fixed locations for now)
     //left
-    for (int i = 0; i<5;i++)
+    for (int i = 0; i<6;i++)
     {
     Instantiate(pp,new Vector3(-2.97f,-4+i*(4),0f),Quaternion.identity);
     }
     
     //right
-    for (int i=0;i<4;i++)
+    for (int i=0;i<5;i++)
     {
     Instantiate(pp,new Vector3(2.97f,-3.2f+i*4,0f),Quaternion.Euler(0f,0f,-180f));
     }
